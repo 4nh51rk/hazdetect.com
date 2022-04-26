@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ShipController;
 use App\Http\Controllers\DeviceController;
+use App\Http\Controllers\MapController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -47,6 +48,8 @@ Route::middleware(['auth', 'verified'])->group(function() {
     Route::get('/device/{device}/edit', [DeviceController::class, 'edit'])->name('device.edit');
     Route::put('/device/{device}', [DeviceController::class, 'update'])->name('device.update');
     Route::delete('/device/{device}', [DeviceController::class, 'destroy'])->name('device.destroy');
+
+    Route::get('/map',[MapController::class, 'index'])->name('map');
 });
 
 require __DIR__.'/auth.php';
