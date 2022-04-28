@@ -15,7 +15,7 @@ export default defineConfig(({ command }) => ({
     resolve: {
         alias: {
             "@": resolve(__dirname, "resources/js"),
-            "/img": resolve(__dirname, "public/img"),
+            "/images": resolve(__dirname, "resources/images"),
         },
     },
     plugins: [vue()],

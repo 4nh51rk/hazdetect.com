@@ -4,7 +4,7 @@ import { createApp, h } from 'vue'
 import { createInertiaApp } from '@inertiajs/inertia-vue3'
 import { InertiaProgress } from '@inertiajs/progress'
 import { ZiggyVue } from "../../vendor/tightenco/ziggy/dist/vue.es";
-// import 'flowbite'
+import VueNativeSock from "vue-native-websocket-vue3";
 
 const appName =
   window.document.getElementsByTagName('title')[0]?.innerText || 'HazDetect'
@@ -33,8 +33,11 @@ createInertiaApp({
 
     VueApp.use(plugin)
       .use(ZiggyVue)
-    //   .component('InertiaHead', Head)
-    //   .component('InertiaLink', Link)
+      .use(
+        VueNativeSock,
+        `ws://${import.meta.env.VITE_THINGSBOARD}/api/ws/plugins/telemetry?token=dummy`,
+        { connectManually: true, format: "json" }
+      )
       .mount(el)
   },
 })

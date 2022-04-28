@@ -96,6 +96,11 @@
                                     :href="route('ship.edit', ship.id)"
                                     class="text-sm text-gray-700 underline"
                                 >Edit</Link>
+                                &nbsp;
+                                <Link v-if="ship.devices_count"
+                                    :href="route('ship.stowage', ship.id)"
+                                    class="text-sm text-gray-700 underline"
+                                >Stow</Link>
                             </td>
                         </tr>
                         <tr v-if="ships.data.length === 0">

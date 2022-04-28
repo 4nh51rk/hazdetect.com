@@ -131,4 +131,11 @@ class ShipController extends Controller
         // return Redirect::route('dashboard')->with('success', 'Devices mapped to Ship.');
         return Redirect::route('ship.edit',$ship->id)->with('success', 'Devices mapped to Ship.');
     }
+
+    public function stowage(Ship $ship)
+    {
+        return Inertia::render('Ships/Stowage', [
+            'ship' => $ship,
+        ]);
+    }
 }

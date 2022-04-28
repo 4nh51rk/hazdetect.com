@@ -21,6 +21,7 @@ specifiers:
   vue: ^3.2.26
   vue-loader: ^16.8.3
   vue-native-websocket-vue3: ^3.1.4
+  vuex: ^4.0.2
 
 dependencies:
   '@vitejs/plugin-vue': 2.3.1_vite@2.9.5+vue@3.2.26
@@ -45,6 +46,7 @@ devDependencies:
   vue: 3.2.26
   vue-loader: 16.8.3
   vue-native-websocket-vue3: 3.1.4_core-js@3.22.2+vue@3.2.26
+  vuex: 4.0.2_vue@3.2.26
 
 packages:
 
@@ -187,6 +189,10 @@ packages:
     dependencies:
       '@vue/compiler-dom': 3.2.26
       '@vue/shared': 3.2.26
+    dev: true
+
+  /@vue/devtools-api/6.1.4:
+    resolution: {integrity: sha512-IiA0SvDrJEgXvVxjNkHPFfDx6SXw0b/TUkqMcDZWNg9fnCAHbTpoo59YfJ9QLFkwa3raau5vSlRVzMSLDnfdtQ==}
     dev: true
 
   /@vue/reactivity-transform/3.2.26:
@@ -1342,6 +1348,15 @@ packages:
       '@vue/runtime-dom': 3.2.26
       '@vue/server-renderer': 3.2.26_vue@3.2.26
       '@vue/shared': 3.2.26
+    dev: true
+
+  /vuex/4.0.2_vue@3.2.26:
+    resolution: {integrity: sha512-M6r8uxELjZIK8kTKDGgZTYX/ahzblnzC4isU1tpmEuOIIKmV+TRdc+H4s8ds2NuZ7wpUTdGRzJRtoj+lI+pc0Q==}
+    peerDependencies:
+      vue: ^3.0.2
+    dependencies:
+      '@vue/devtools-api': 6.1.4
+      vue: 3.2.26
     dev: true
 
   /wrappy/1.0.2:

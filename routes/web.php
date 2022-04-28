@@ -35,6 +35,7 @@ Route::middleware(['auth', 'verified'])->group(function() {
     Route::get('/ship/{ship}/upload',[ShipController::class,'upload'])->name('ship.upload');
     Route::post('/ship/{ship}/upload',[ShipController::class,'uploadStore'])->name('ship.upload.store');
     Route::get('/ship/{ship}/edit',[ShipController::class, 'edit'])->name('ship.edit');
+    Route::get('/ship/{ship}/stowage',[ShipController::class, 'stowage'])->name('ship.stowage');
     Route::put('/ship/{ship}',[ShipController::class,'update'])->name('ship.update');
     Route::delete('/ship/{ship}',[ShipController::class,'destroy'])->name('ship.destroy');
     // region Ship End
